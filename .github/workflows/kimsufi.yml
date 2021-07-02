@@ -24,9 +24,13 @@ jobs:
           pip install -r requirements.txt
 
       - name: 北美 KS-10 监控
+        env:
+          WEBHOOK: ${{ secrets.WEBHOOK }}
         run: |
-          python kimsufi.py --hardware 1804sk21
+          python kimsufi.py --hardware 1804sk21 --webhook "$WEBHOOK"
 
       - name: 欧洲 KS-10 监控
+        env:
+          WEBHOOK: ${{ secrets.WEBHOOK }}
         run: |
-          python kimsufi.py --hardware 1801sk21
+          python kimsufi.py --hardware 1801sk21 --webhook "$WEBHOOK"
