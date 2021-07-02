@@ -26,8 +26,8 @@ jobs:
 
       - name: 北美 KS-10 监控
         run: |
-          poetry run kimsufi.py --hardware 1804sk21
+          poetry run python kimsufi.py --hardware 1804sk21
 
       - name: 欧洲 KS-10 监控
         run: |
-          poetry run kimsufi.py --hardware 1801sk21
+          poetry run python kimsufi.py --hardware 1801sk21
