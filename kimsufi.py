@@ -107,7 +107,7 @@ def main(
 
     json_list = list(map(lambda x: x.dict(), ret_list))
 
-    if webhook:
+    if webhook and len(json_list) > 0:  # 保证有数据再调用 WebHook
         resp = requests.post(webhook, json=json_list)
         if resp.ok:
             return
