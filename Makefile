@@ -4,4 +4,4 @@ format:
 
 
 run:
-	poetry run python kimsufi.py
+	poetry run python kimsufi.py --hardware 1801sk18

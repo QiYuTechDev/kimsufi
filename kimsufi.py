@@ -68,6 +68,17 @@ def main(
 ):
     """
     kimsufi 库存监控
+
+    Model   hardware
+    KS-3    1801sk14
+    KS-7    1801sk18
+    KS-10   1801sk21
+
+    KS-12   1804sk23
+
+    看起来 KS 系列对应的:
+    1084 是 northAmerica 区域
+    1801 是 europe 区域
     """
     print(f"{region=} {hardware=} {datacenter=}")
     resp = requests.get(url, headers=headers)
