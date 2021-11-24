@@ -3,8 +3,8 @@ name: kimsufi monitor
 on:
   push:
     branches: [ "main" ]
-  #schedule:
-  #  - cron: "*/5 * * * *"
+  schedule:
+    - cron: "*/5 * * * *"
 
 jobs:
   build:
@@ -27,18 +27,13 @@ jobs:
         env:
           WEBHOOK: ${{ secrets.WEBHOOK }}
         run: |
-          echo "KS-9"
-          python kimsufi.py --hardware 1804sk20 --webhook "$WEBHOOK"
+          echo "KS-LE"
+          python kimsufi.py --hardware 2201sk01 --webhook "$WEBHOOK"
 
       - name: 欧洲监控
         env:
           WEBHOOK: ${{ secrets.WEBHOOK }}
         run: |
-          echo "KS-10"
-          python kimsufi.py --hardware 1801sk21 --webhook "$WEBHOOK"
-          echo "KS-9"
-          python kimsufi.py --hardware 1801sk20 --webhook "$WEBHOOK"
-          echo "KS-6"
-          python kimsufi.py --hardware 1801sk17 --webhook "$WEBHOOK"
-          echo "KS-2"
-          python kimsufi.py --hardware 1801sk13 --webhook "$WEBHOOK"
+          echo "KS-LE"
+          python kimsufi.py --hardware 2204sk01 --webhook "$WEBHOOK"
+
