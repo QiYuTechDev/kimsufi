@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "main" ]
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/6 * * * *"
 
 jobs:
   build:
@@ -29,8 +29,6 @@ jobs:
         run: |
           echo "KS-LE"
           python kimsufi.py --hardware 2201sk01 --webhook "$WEBHOOK"
-          python kimsufi.py --hardware 1804sk18 --webhook "$WEBHOOK"
-
 
       - name: 欧洲监控
         env:
